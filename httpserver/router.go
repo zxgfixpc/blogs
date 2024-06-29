@@ -7,8 +7,9 @@ import (
 )
 
 func registerRouter(router *gin.Engine) {
-	testGroup := router.Group("test/")
+	blogsGroup := router.Group("blogs/")
 	{
-		testGroup.GET("hello", controller.Hello)
+		blogsGroup.GET("hello", controller.Hello)
 	}
+
 }

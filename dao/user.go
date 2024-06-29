@@ -24,6 +24,14 @@ func GetUserInfoByUserName(ctx context.Context, username string) (result *User, 
 	return
 }
 
+func FindUserInfoByUsernames(ctx context.Context, usernames []string) (result []*User, err error) {
+	if len(usernames) == 0 {
+		return nil, nil
+	}
+	err = infra.MysqlClient.WithContext(ctx).Model(&User{}).Where("username in (?)", usernames).Find(&result).Error
+	return
+}
+
 func CreateUser(ctx context.Context, userInfo *User) error {
 	return infra.MysqlClient.WithContext(ctx).Create(userInfo).Error
 }
