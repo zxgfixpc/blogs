@@ -20,7 +20,7 @@ func Login(c *gin.Context) {
 		ginsugar.Fail(c, nil, err)
 		return
 	}
-	c.SetCookie(consts.CookieKeySessionID, sessionID, consts.CookieKeySessionExpr*3600, "", "", true, true)
+	c.SetCookie(consts.CookieKeySessionID, sessionID, consts.CookieKeySessionExpr*3600, "", "localhost", false, true)
 
 	ginsugar.Success(c, nil)
 }

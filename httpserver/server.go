@@ -14,6 +14,7 @@ import (
 	"blogs/dao"
 	"blogs/lib/infra"
 	"blogs/lib/log"
+	"blogs/middleware"
 
 	"github.com/gin-gonic/gin"
 )
@@ -41,6 +42,8 @@ func Start() {
 	g := gin.New()
 	g.Use(log.LogMiddleware())
 	g.Use(gin.Recovery())
+	g.Use(middleware.CORSMiddleware())
+
 	registerRouter(g)
 
 	server := &http.Server{
