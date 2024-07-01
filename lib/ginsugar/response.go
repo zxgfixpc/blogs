@@ -46,3 +46,7 @@ func InputError(c *gin.Context, err error) {
 func Fail(c *gin.Context, result interface{}, err error) {
 	buildJsonResult(c, http.StatusInternalServerError, result, err)
 }
+
+func FailNotLogin(c *gin.Context, err error) {
+	buildJsonResult(c, http.StatusForbidden, nil, err)
+}

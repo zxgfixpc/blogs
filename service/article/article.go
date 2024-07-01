@@ -6,6 +6,21 @@ import (
 	"blogs/dao"
 )
 
+func CreateOrUpdateArticle(ctx context.Context, article *dao.Article) error {
+	if article.ArticleID == "" {
+		return dao.CreateArticle(ctx, article)
+	}
+
+	updater := map[string]interface{}{
+		"title":       article.Title,
+		"summary":     article.Summary,
+		"cover_image": article.CoverImage,
+		"tags":        article.Tags,
+		"content":     article.Content,
+	}
+	return dao.UpdateArticleByArticleID(ctx, article.ArticleID, updater)
+}
+
 func GetRecommendArticle(ctx context.Context, page, size int) (*GetRecommendArticleRsp, error) {
 	articles, err := dao.GetArticleListByLikeCountSort(ctx, page, size)
 	if err != nil {
@@ -18,34 +33,36 @@ func GetRecommendArticle(ctx context.Context, page, size int) (*GetRecommendArti
 	}
 	ret.HasMore = len(articles) == size
 
-	usernames := make([]string, 0, len(articles))
+	userIds := make([]string, 0, len(articles))
 	for _, v := range articles {
-		usernames = append(usernames, v.Username)
+		userIds = append(userIds, v.UserID)
 	}
 
 	// 获取作者的头像+昵称
-	users, err := dao.FindUserInfoByUsernames(ctx, usernames)
+	users, err := dao.FindUserInfoByUserIDs(ctx, userIds)
 	if err != nil {
 		return nil, err
 	}
 
-	userMap := make(map[string]dao.User, len(users))
+	userMap := make(map[string]dao.UserInfo, len(users))
 	for _, v := range users {
-		userMap[v.Username] = *v
+		userMap[v.UserID] = *v
 	}
 
 	ret.List = make([]ArtiInfo, 0, len(articles))
 	for _, v := range articles {
 		item := ArtiInfo{
 			ID:           v.ID,
-			NID:          v.NID,
+			ArticleID:    v.ArticleID,
 			Title:        v.Title,
 			Summary:      v.Summary,
+			CoverImage:   v.CoverImage,
+			Tags:         v.Tags,
 			ViewCount:    v.ViewCount,
 			LikeCount:    v.LikeCount,
 			CommentCount: v.CommentCount,
-			Nick:         userMap[v.Username].Nick,
-			Avatar:       userMap[v.Username].Avatar,
+			Nick:         userMap[v.UserID].Nick,
+			Avatar:       userMap[v.UserID].Avatar,
 		}
 		ret.List = append(ret.List, item)
 	}

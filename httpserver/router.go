@@ -2,14 +2,20 @@ package httpserver
 
 import (
 	"blogs/controller"
+	"blogs/middleware"
 
 	"github.com/gin-gonic/gin"
 )
 
 func registerRouter(router *gin.Engine) {
-	blogsGroup := router.Group("blogs/")
+	loginGroup := router.Group("blogs/")
 	{
-		blogsGroup.GET("hello", controller.Hello)
+		loginGroup.POST("login", controller.Login)
 	}
 
+	commGroup := router.Group("blogs/")
+	commGroup.Use(middleware.LoginMiddleware())
+	{
+
+	}
 }
