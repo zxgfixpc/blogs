@@ -8,14 +8,16 @@ import (
 )
 
 func registerRouter(router *gin.Engine) {
-	loginGroup := router.Group("blogs/")
+	notLoginGroup := router.Group("blogs/")
 	{
-		loginGroup.POST("login", controller.Login)
+		notLoginGroup.POST("login", controller.Login)
+		notLoginGroup.GET("recommend-article", controller.GetRecommendArticles)
 	}
 
-	commGroup := router.Group("blogs/")
-	commGroup.Use(middleware.LoginMiddleware())
+	needLoginGroup := router.Group("blogs/").Use(middleware.LoginMiddleware())
 	{
-
+		needLoginGroup.POST("exit", controller.Exit)
+		needLoginGroup.POST("article-create-or-update", controller.CreateOrUpdateArticle)
 	}
+
 }

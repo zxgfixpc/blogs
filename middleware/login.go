@@ -30,6 +30,8 @@ func LoginMiddleware() gin.HandlerFunc {
 
 		// TODO 刷新登录cookie
 
+		c.Set(consts.CtxKeyUserID, loginInfo.UserID)
+
 		c.Next()
 	}
 }

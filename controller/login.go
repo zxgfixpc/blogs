@@ -24,3 +24,17 @@ func Login(c *gin.Context) {
 
 	ginsugar.Success(c, nil)
 }
+
+func Exit(c *gin.Context) {
+	userID := ginsugar.GetUserID(c)
+	if userID == "" {
+		ginsugar.Success(c, nil)
+		return
+	}
+	err := user.Exit(ginsugar.Context(c), userID)
+	if err != nil {
+		ginsugar.Fail(c, nil, err)
+		return
+	}
+	ginsugar.Success(c, nil)
+}

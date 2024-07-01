@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"blogs/conf"
+	"blogs/dao"
 	"blogs/lib/infra"
 	"blogs/lib/log"
 
@@ -30,6 +31,10 @@ func Start() {
 	}
 	// 初始化基础组件
 	if err := infra.Start(ctx); err != nil {
+		panic(err)
+	}
+	// 初始化Dao
+	if err := dao.InitDao(); err != nil {
 		panic(err)
 	}
 

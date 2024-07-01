@@ -27,11 +27,12 @@ func defaultDB(ctx context.Context) *gorm.DB {
 	return db.WithContext(ctx)
 }
 
-func init() {
+func InitDao() error {
 	db = infra.MysqlClient
-	db.Callback().Query().Register(CallbackQueryNotDeleted, func(d *gorm.DB) {
+	err := db.Callback().Query().Register(CallbackQueryNotDeleted, func(d *gorm.DB) {
 		d.Where("deleted_id = 0")
 	})
+	return err
 }
 
 // Strings 是 []string 的自定义类型
