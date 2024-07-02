@@ -29,16 +29,28 @@ const (
 
 func defaultDB(ctx context.Context) *gorm.DB {
 	dbItf := ctx.Value(CtxKeyTransID)
-	transImp, ok := dbItf.(*trans)
-	if ok && transImp != nil && transImp.db != nil {
-		return transImp.db
+	existDB, ok := dbItf.(*gorm.DB)
+	if ok && existDB != nil {
+		return existDB
 	}
 
 	return db.WithContext(ctx)
 }
 
-type trans struct {
-	db *gorm.DB
+func Trans(parentCtx context.Context, fn func(ctx context.Context) error) error {
+	var transDB *gorm.DB
+	dbItf := parentCtx.Value(CtxKeyTransID)
+	existDB, ok := dbItf.(*gorm.DB)
+	if ok && existDB != nil {
+		transDB = existDB
+	} else {
+		transDB = db.WithContext(parentCtx)
+		parentCtx = context.WithValue(parentCtx, CtxKeyTransID, transDB)
+	}
+
+	return transDB.Transaction(func(tx *gorm.DB) error {
+		return fn(parentCtx)
+	})
 }
 
 func InitDao() error {

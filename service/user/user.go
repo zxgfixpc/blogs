@@ -41,29 +41,30 @@ func Exit(ctx context.Context, userID string) error {
 }
 
 func Register(ctx context.Context, userID, password string) error {
-	userInfo, err := dao.GetUserLoginByUserID(ctx, userID)
-	if err != nil {
-		return err
-	}
-	if userInfo != nil && userInfo.UserID != "" {
-		return fmt.Errorf("用户已注册")
-	}
+	return dao.Trans(ctx, func(transCtx context.Context) error {
+		userInfo, err := dao.GetUserLoginByUserID(transCtx, userID)
+		if err != nil {
+			return err
+		}
+		if userInfo != nil && userInfo.UserID != "" {
+			return fmt.Errorf("用户已注册")
+		}
 
-	err = dao.CreateUserLogin(ctx, &dao.UserLogin{
-		UserID:   userID,
-		Password: password,
+		err = dao.CreateUserLogin(transCtx, &dao.UserLogin{
+			UserID:   userID,
+			Password: password,
+		})
+		if err != nil {
+			return err
+		}
+
+		err = dao.CreateUserInfo(transCtx, &dao.UserInfo{
+			UserID: userID,
+			Nick:   fmt.Sprintf("Note_%v", time.Now().Unix()),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
 	})
-	if err != nil {
-		return err
-	}
-
-	err = dao.CreateUserInfo(ctx, &dao.UserInfo{
-		UserID: userID,
-		Nick:   fmt.Sprintf("Note_%v", time.Now().Unix()),
-	})
-	if err != nil {
-		return err
-	}
-
-	return nil
 }
