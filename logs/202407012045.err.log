@@ -1,0 +1,12 @@
+2024-07-01T20:45:34.722+0800	PANIC	httpserver/server.go:57	server listen fail, err: listen tcp :8090: bind: address already in use	{"trace_id": ""}
+2024-07-01T22:15:14.472+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:15:53.099+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:15:57.763+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:16:19.666+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:22:17.806+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:22:34.238+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:25:23.823+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:28:49.524+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:31:51.823+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:38:14.502+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:39:33.068+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}

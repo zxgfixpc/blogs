@@ -14,18 +14,26 @@ import (
 
 func LoginMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		cookie, err := c.Request.Cookie(consts.CookieKeySessionID)
-		if err != nil || cookie == nil || cookie.Value == "" {
+		userID, err := c.Request.Cookie(consts.CookieKeyUserID)
+		if err != nil || userID == nil || userID.Value == "" {
 			ginsugar.FailNotLogin(c, fmt.Errorf("用户未登录"))
 			return
 		}
 
-		loginInfo, err := dao.GetUserLoginBySessionID(context.TODO(), cookie.Value)
-		if err != nil || loginInfo == nil || loginInfo.SessionID == "" {
-			ginsugar.FailNotLogin(c, fmt.Errorf("系统错误，请重新登录"))
+		sessionID, err := c.Request.Cookie(consts.CookieKeySessionID)
+		if err != nil || sessionID == nil || sessionID.Value == "" {
+			ginsugar.FailNotLogin(c, fmt.Errorf("用户未登录"))
+			return
+		}
+
+		loginInfo, err := dao.GetUserLoginByUserID(context.TODO(), userID.Value)
+		if err != nil || loginInfo == nil || loginInfo.SessionID == "" || loginInfo.SessionID != sessionID.Value {
+			ginsugar.FailNotLogin(c, fmt.Errorf("请重新登录"))
+			return
 		}
 		if time.Now().Unix() > loginInfo.SessionExpr {
 			ginsugar.FailNotLogin(c, fmt.Errorf("登录过期，请重新登录"))
+			return
 		}
 
 		// TODO 刷新登录cookie

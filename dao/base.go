@@ -21,10 +21,24 @@ type Base struct {
 
 var db *gorm.DB
 
-const CallbackQueryNotDeleted = "not_deleted"
+const (
+	CallbackQueryNotDeleted = "not_deleted"
+
+	CtxKeyTransID = "ctx_trans_id"
+)
 
 func defaultDB(ctx context.Context) *gorm.DB {
+	dbItf := ctx.Value(CtxKeyTransID)
+	transImp, ok := dbItf.(*trans)
+	if ok && transImp != nil && transImp.db != nil {
+		return transImp.db
+	}
+
 	return db.WithContext(ctx)
+}
+
+type trans struct {
+	db *gorm.DB
 }
 
 func InitDao() error {

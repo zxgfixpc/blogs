@@ -1,0 +1,4 @@
+2024-07-02T10:50:29.229+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-02T10:50:29.230+0800	PANIC	httpserver/server.go:57	server listen fail, err: listen tcp :8090: bind: address already in use	{"trace_id": ""}
+2024-07-02T10:50:44.462+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-02T10:50:44.462+0800	PANIC	httpserver/server.go:57	server listen fail, err: listen tcp :8090: bind: address already in use	{"trace_id": ""}

@@ -1,0 +1,6 @@
+2024-07-02T10:51:09.719+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-02T10:51:31.647+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '12'] rows:[0] cost:[2]	{"trace_id": ""}
+2024-07-02T10:51:31.647+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-02T10:51:31.648+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3656166  <nil>} {trace_id 15 0  <nil>}
+2024-07-02T11:56:51.655+0800	INFO	httpserver/server.go:69	[shutdown success]	{"trace_id": ""}
+2024-07-02T11:56:51.656+0800	INFO	httpserver/server.go:79	[shutdown success]	{"trace_id": ""}

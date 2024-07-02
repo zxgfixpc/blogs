@@ -11,6 +11,7 @@ func registerRouter(router *gin.Engine) {
 	notLoginGroup := router.Group("blogs/")
 	{
 		notLoginGroup.POST("login", controller.Login)
+		notLoginGroup.POST("register", controller.Register)
 		notLoginGroup.GET("recommend-article", controller.GetRecommendArticles)
 	}
 

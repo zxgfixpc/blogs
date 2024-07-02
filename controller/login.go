@@ -3,7 +3,6 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 
-	"blogs/lib/consts"
 	"blogs/lib/ginsugar"
 	"blogs/service/user"
 )
@@ -20,9 +19,10 @@ func Login(c *gin.Context) {
 		ginsugar.Fail(c, nil, err)
 		return
 	}
-	c.SetCookie(consts.CookieKeySessionID, sessionID, consts.CookieKeySessionExpr*3600, "", "localhost", false, true)
 
-	ginsugar.Success(c, nil)
+	ginsugar.Success(c, map[string]interface{}{
+		"session_id": sessionID,
+	})
 }
 
 func Exit(c *gin.Context) {
@@ -36,5 +36,21 @@ func Exit(c *gin.Context) {
 		ginsugar.Fail(c, nil, err)
 		return
 	}
+	ginsugar.Success(c, nil)
+}
+
+func Register(c *gin.Context) {
+	req := &user.LoginReq{}
+	if err := c.ShouldBindJSON(req); err != nil {
+		ginsugar.InputError(c, err)
+		return
+	}
+
+	err := user.Register(ginsugar.Context(c), req.UserID, req.Password)
+	if err != nil {
+		ginsugar.Fail(c, nil, err)
+		return
+	}
+
 	ginsugar.Success(c, nil)
 }

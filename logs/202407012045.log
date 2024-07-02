@@ -1,0 +1,36 @@
+2024-07-01T20:45:34.721+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-01T20:45:34.722+0800	PANIC	httpserver/server.go:57	server listen fail, err: listen tcp :8090: bind: address already in use	{"trace_id": ""}
+2024-07-01T20:45:56.809+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-01T22:15:14.471+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '123'] rows:[0] cost:[22]	{"trace_id": ""}
+2024-07-01T22:15:14.472+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:15:14.472+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 24359333  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:15:53.099+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '123'] rows:[0] cost:[1]	{"trace_id": ""}
+2024-07-01T22:15:53.099+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:15:53.100+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2884416  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:15:57.763+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '123'] rows:[0] cost:[1]	{"trace_id": ""}
+2024-07-01T22:15:57.763+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:15:57.764+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1982250  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:16:19.666+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '123'] rows:[0] cost:[1]	{"trace_id": ""}
+2024-07-01T22:16:19.666+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:16:19.667+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3120916  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:22:17.805+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '12'] rows:[0] cost:[1]	{"trace_id": ""}
+2024-07-01T22:22:17.806+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:22:17.806+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2865500  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:22:34.238+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '123'] rows:[0] cost:[0]	{"trace_id": ""}
+2024-07-01T22:22:34.238+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:22:34.239+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1366959  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:25:23.822+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '123'] rows:[0] cost:[1]	{"trace_id": ""}
+2024-07-01T22:25:23.823+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:25:23.823+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 ::1 <nil>} {cost 8 2718458  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:28:49.524+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '123'] rows:[0] cost:[1]	{"trace_id": ""}
+2024-07-01T22:28:49.524+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:28:49.524+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 ::1 <nil>} {cost 8 2759916  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:31:51.823+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '23'] rows:[0] cost:[1]	{"trace_id": ""}
+2024-07-01T22:31:51.823+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:31:51.824+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 ::1 <nil>} {cost 8 2283875  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:38:14.502+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '123'] rows:[0] cost:[2]	{"trace_id": ""}
+2024-07-01T22:38:14.502+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:38:14.503+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 ::1 <nil>} {cost 8 4250208  <nil>} {trace_id 15 0  <nil>}
+2024-07-01T22:39:33.068+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = '1'] rows:[0] cost:[0]	{"trace_id": ""}
+2024-07-01T22:39:33.068+0800	ERROR	ginsugar/response.go:27	[账户不存在]	{"trace_id": ""}
+2024-07-01T22:39:33.069+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 500  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 ::1 <nil>} {cost 8 1524167  <nil>} {trace_id 15 0  <nil>}

@@ -1,0 +1,1 @@
+2024-07-01T17:19:30.969+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[2]	{"trace_id": ""}
