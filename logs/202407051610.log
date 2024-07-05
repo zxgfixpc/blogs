@@ -1,0 +1,6 @@
+2024-07-05T16:10:49.017+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T16:10:55.749+0800	INFO	article/article.go:31	[page %v size:%v 1 10]	{"trace_id": ""}
+2024-07-05T16:10:55.749+0800	INFO	article/article.go:36	[aritcles:%+v []]	{"trace_id": ""}
+2024-07-05T16:10:55.749+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 619959  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:12:42.750+0800	INFO	httpserver/server.go:69	[shutdown success]	{"trace_id": ""}
+2024-07-05T16:12:42.751+0800	INFO	httpserver/server.go:79	[shutdown success]	{"trace_id": ""}

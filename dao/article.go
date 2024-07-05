@@ -33,7 +33,9 @@ func GetArticleListByLikeCountSort(ctx context.Context, page int, size int) (res
 	err = defaultDB(ctx).Model(&Article{}).
 		Order("like_count DESC").
 		Offset((page - 1) * size).
-		Limit(size).Error
+		Limit(size).
+		Find(&result).
+		Error
 	return
 }
 

@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"blogs/dao"
+	"blogs/lib/log"
 )
 
 func CreateOrUpdateArticle(ctx context.Context, article *dao.Article) (string, error) {
@@ -27,10 +28,12 @@ func CreateOrUpdateArticle(ctx context.Context, article *dao.Article) (string, e
 }
 
 func GetRecommendArticle(ctx context.Context, page, size int) (*GetRecommendArticleRsp, error) {
+	log.InfoF(ctx, "page %v size:%v", page, size)
 	articles, err := dao.GetArticleListByLikeCountSort(ctx, page, size)
 	if err != nil {
 		return nil, err
 	}
+	log.InfoF(ctx, "aritcles:%+v", articles)
 
 	ret := &GetRecommendArticleRsp{}
 	if len(articles) == 0 {

@@ -1,0 +1,475 @@
+2024-07-05T16:14:19.464+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-05T16:14:24.093+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:14:24.097+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[3] cost:[3]	{"trace_id": ""}
+2024-07-05T16:14:24.097+0800	INFO	article/article.go:36	aritcles:[0x14000348000 0x140003480e0 0x140003481c0]	{"trace_id": ""}
+2024-07-05T16:14:24.098+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:14:24.098+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 5752750  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:21:03.757+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:21:03.759+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[3] cost:[2]	{"trace_id": ""}
+2024-07-05T16:21:03.759+0800	INFO	article/article.go:36	aritcles:[0x140004fe000 0x140004fe0e0 0x140004fe1c0]	{"trace_id": ""}
+2024-07-05T16:21:03.760+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:21:03.760+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3656583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:21:48.792+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T16:21:48.793+0800	ERROR	ginsugar/response.go:27	[登录过期，请重新登录]	{"trace_id": ""}
+2024-07-05T16:21:48.798+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[INSERT INTO `articles` (`deleted_id`,`created_at`,`updated_at`,`article_id`,`title`,`summary`,`cover_image`,`tags`,`content`,`view_count`,`like_count`,`comment_count`,`user_id`,`status`) VALUES (0,'2024-07-05 16:21:48.795','2024-07-05 16:21:48.795','nid_1720167708794','456','123123123123','','null','111
+11
+
+333',0,0,0,'',0)] rows:[1] cost:[3]	{"trace_id": ""}
+2024-07-05T16:21:48.798+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article-create-or-update{status 11 403  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/article-create-or-update <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 7241708  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:21:52.932+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T16:21:52.932+0800	ERROR	ginsugar/response.go:27	[登录过期，请重新登录]	{"trace_id": ""}
+2024-07-05T16:21:52.938+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[INSERT INTO `articles` (`deleted_id`,`created_at`,`updated_at`,`article_id`,`title`,`summary`,`cover_image`,`tags`,`content`,`view_count`,`like_count`,`comment_count`,`user_id`,`status`) VALUES (0,'2024-07-05 16:21:52.934','2024-07-05 16:21:52.934','nid_1720167712933','456','123123123123','','null','111
+11
+
+333',0,0,0,'',0)] rows:[1] cost:[4]	{"trace_id": ""}
+2024-07-05T16:21:52.938+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article-create-or-update{status 11 403  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/article-create-or-update <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 6959167  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:22:11.615+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T16:22:11.615+0800	ERROR	ginsugar/response.go:27	[登录过期，请重新登录]	{"trace_id": ""}
+2024-07-05T16:22:11.620+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[INSERT INTO `articles` (`deleted_id`,`created_at`,`updated_at`,`article_id`,`title`,`summary`,`cover_image`,`tags`,`content`,`view_count`,`like_count`,`comment_count`,`user_id`,`status`) VALUES (0,'2024-07-05 16:22:11.617','2024-07-05 16:22:11.617','nid_1720167731616','456','123123123123','','null','111
+11
+
+333',0,0,0,'',0)] rows:[1] cost:[3]	{"trace_id": ""}
+2024-07-05T16:22:11.620+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article-create-or-update{status 11 403  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/article-create-or-update <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 6385291  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:24:23.324+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:24:23.325+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:24:23.325+0800	INFO	article/article.go:36	aritcles:[0x140004fe2a0 0x140004fe380 0x140004fe460 0x140004fe540 0x140004fe620 0x140004fe700]	{"trace_id": ""}
+2024-07-05T16:24:23.325+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:24:23.326+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1748583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:43:42.950+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:43:42.953+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[2]	{"trace_id": ""}
+2024-07-05T16:43:42.953+0800	INFO	article/article.go:36	aritcles:[0x1400011e000 0x1400011e0e0 0x1400011e1c0 0x1400011e2a0 0x1400011e380 0x1400011e460]	{"trace_id": ""}
+2024-07-05T16:43:42.954+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:43:42.954+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 4574292  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:43:54.801+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:43:54.802+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:43:54.802+0800	INFO	article/article.go:36	aritcles:[0x140001828c0 0x140001829a0 0x14000182a80 0x14000182b60 0x14000182c40 0x14000182d20]	{"trace_id": ""}
+2024-07-05T16:43:54.803+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:43:54.803+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1679416  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:44:03.712+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:44:03.713+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:03.713+0800	INFO	article/article.go:36	aritcles:[0x14000183420 0x14000183500 0x140001835e0 0x140001836c0 0x140001837a0 0x14000183880]	{"trace_id": ""}
+2024-07-05T16:44:03.713+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:03.713+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1249667  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:44:08.853+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:44:08.854+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T16:44:08.854+0800	INFO	article/article.go:36	aritcles:[0x140002b4000 0x140002b40e0 0x140002b41c0 0x140002b42a0 0x140002b4380 0x140002b4460]	{"trace_id": ""}
+2024-07-05T16:44:08.855+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:08.855+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2381667  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:44:12.765+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:44:12.766+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:12.766+0800	INFO	article/article.go:36	aritcles:[0x140002b49a0 0x140002b4a80 0x140002b4b60 0x140002b4c40 0x140002b4d20 0x140002b4e00]	{"trace_id": ""}
+2024-07-05T16:44:12.766+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:12.767+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1774084  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:44:13.693+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:44:13.694+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:13.694+0800	INFO	article/article.go:36	aritcles:[0x14000348620 0x14000348700 0x140003487e0 0x140003488c0 0x140003489a0 0x14000348a80]	{"trace_id": ""}
+2024-07-05T16:44:13.694+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:13.694+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1280709  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:44:15.673+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:44:15.674+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:15.674+0800	INFO	article/article.go:36	aritcles:[0x1400011eb60 0x1400011ec40 0x1400011ed20 0x1400011ee00 0x1400011eee0 0x1400011efc0]	{"trace_id": ""}
+2024-07-05T16:44:15.675+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:15.675+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1434292  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:44:18.713+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:44:18.713+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:18.713+0800	INFO	article/article.go:36	aritcles:[0x1400011f260 0x1400011f340 0x1400011f420 0x1400011f500 0x1400011f5e0 0x1400011f6c0]	{"trace_id": ""}
+2024-07-05T16:44:18.714+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:44:18.714+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1231375  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:46:50.788+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:46:50.790+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T16:46:50.790+0800	INFO	article/article.go:36	aritcles:[0x140001821c0 0x140001822a0 0x14000182380 0x14000182460 0x14000182540 0x14000182620]	{"trace_id": ""}
+2024-07-05T16:46:50.790+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:46:50.791+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2723459  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:46:52.700+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:46:52.701+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:46:52.701+0800	INFO	article/article.go:36	aritcles:[0x14000150460 0x14000150540 0x14000150620 0x14000150700 0x140001507e0 0x140001508c0]	{"trace_id": ""}
+2024-07-05T16:46:52.702+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:46:52.702+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1827500  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:47:18.209+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:47:18.210+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T16:47:18.210+0800	INFO	article/article.go:36	aritcles:[0x140002b47e0 0x140002b48c0 0x140002b49a0 0x140002b4a80 0x140002b4b60 0x140002b4c40]	{"trace_id": ""}
+2024-07-05T16:47:18.210+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:47:18.210+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1540750  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:48:49.131+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:48:49.133+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T16:48:49.133+0800	INFO	article/article.go:36	aritcles:[0x14000150000 0x140001500e0 0x140001501c0 0x140001502a0 0x14000150380 0x14000150460]	{"trace_id": ""}
+2024-07-05T16:48:49.133+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:48:49.134+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2591709  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T16:48:50.629+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T16:48:50.631+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T16:48:50.631+0800	INFO	article/article.go:36	aritcles:[0x14000182620 0x14000182700 0x140001827e0 0x140001828c0 0x140001829a0 0x14000182a80]	{"trace_id": ""}
+2024-07-05T16:48:50.631+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T16:48:50.631+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2030750  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:07:20.910+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:07:20.912+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:07:20.912+0800	INFO	article/article.go:36	aritcles:[0x140001a0000 0x140001a00e0 0x140001a01c0 0x140001a02a0 0x140001a0380 0x140001a0460]	{"trace_id": ""}
+2024-07-05T17:07:20.913+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:07:20.913+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2772209  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:27:52.269+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:27:52.272+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:27:52.272+0800	INFO	article/article.go:36	aritcles:[0x140001ba000 0x140001ba0e0 0x140001ba1c0 0x140001ba2a0 0x140001ba380 0x140001ba460]	{"trace_id": ""}
+2024-07-05T17:27:52.273+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:27:52.273+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3347917  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:27:54.189+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:27:54.190+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:27:54.190+0800	INFO	article/article.go:36	aritcles:[0x140001bab60 0x140001bac40 0x140001bad20 0x140001bae00 0x140001baee0 0x140001bafc0]	{"trace_id": ""}
+2024-07-05T17:27:54.190+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:27:54.190+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1336917  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:28:56.832+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:28:56.834+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:28:56.834+0800	INFO	article/article.go:36	aritcles:[0x140001bb6c0 0x140001bb7a0 0x140001bb880 0x140001bb960 0x140001bba40 0x140001bbb20]	{"trace_id": ""}
+2024-07-05T17:28:56.834+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:28:56.834+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2048583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:28:59.606+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:28:59.607+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:28:59.607+0800	INFO	article/article.go:36	aritcles:[0x14000156460 0x14000156540 0x14000156620 0x14000156700 0x140001567e0 0x140001568c0]	{"trace_id": ""}
+2024-07-05T17:28:59.608+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:28:59.608+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2080292  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:29:05.880+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:29:05.882+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:29:05.882+0800	INFO	article/article.go:36	aritcles:[0x14000182460 0x14000182540 0x14000182620 0x14000182700 0x140001827e0 0x140001828c0]	{"trace_id": ""}
+2024-07-05T17:29:05.882+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:29:05.883+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2171708  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:29:12.872+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:29:12.873+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:29:12.873+0800	INFO	article/article.go:36	aritcles:[0x14000396000 0x140003960e0 0x140003961c0 0x140003962a0 0x14000396380 0x14000396460]	{"trace_id": ""}
+2024-07-05T17:29:12.874+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:29:12.874+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2512208  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:29:26.056+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-05T17:29:26.060+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[UPDATE `user_login` SET `session_expr`=1720178966,`session_id`='fff1720171766',`updated_at`='2024-07-05 17:29:26.057' WHERE user_id = 'fff'] rows:[1] cost:[4]	{"trace_id": ""}
+2024-07-05T17:29:26.060+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 200  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 6867458  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:29:26.420+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:29:26.421+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:29:26.421+0800	INFO	article/article.go:36	aritcles:[0x14000156540 0x14000156620 0x14000156700 0x140001567e0 0x140001568c0 0x140001569a0]	{"trace_id": ""}
+2024-07-05T17:29:26.421+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:29:26.421+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1338375  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:29:29.108+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:29:29.109+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:29:29.109+0800	INFO	article/article.go:36	aritcles:[0x1400025e460 0x1400025e540 0x1400025e620 0x1400025e700 0x1400025e7e0 0x1400025e8c0]	{"trace_id": ""}
+2024-07-05T17:29:29.109+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:29:29.109+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1230333  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:29:49.944+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:29:49.946+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:29:49.946+0800	INFO	article/article.go:36	aritcles:[0x14000156c40 0x14000156d20 0x14000156e00 0x14000156ee0 0x14000156fc0 0x140001570a0]	{"trace_id": ""}
+2024-07-05T17:29:49.946+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:29:49.946+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2010000  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:30:32.666+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:30:32.667+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:32.667+0800	INFO	article/article.go:36	aritcles:[0x14000182b60 0x14000182c40 0x14000182d20 0x14000182e00 0x14000182ee0 0x14000182fc0]	{"trace_id": ""}
+2024-07-05T17:30:32.668+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:32.668+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1761708  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:30:32.697+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:30:32.698+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:32.698+0800	INFO	article/article.go:36	aritcles:[0x1400025eb60 0x1400025ec40 0x1400025ed20 0x1400025ee00 0x1400025eee0 0x1400025efc0]	{"trace_id": ""}
+2024-07-05T17:30:32.698+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:32.698+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1242625  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:30:45.618+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:30:45.619+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:45.619+0800	INFO	article/article.go:36	aritcles:[0x14000360000 0x140003600e0 0x140003601c0 0x140003602a0 0x14000360380 0x14000360460]	{"trace_id": ""}
+2024-07-05T17:30:45.620+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:45.620+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1656708  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:30:45.629+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:30:45.629+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:45.629+0800	INFO	article/article.go:36	aritcles:[0x140003609a0 0x14000360a80 0x14000360b60 0x14000360c40 0x14000360d20 0x14000360e00]	{"trace_id": ""}
+2024-07-05T17:30:45.630+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:45.630+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1502083  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:30:49.607+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:30:49.607+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:49.608+0800	INFO	article/article.go:36	aritcles:[0x14000183960 0x14000183a40 0x14000183b20 0x14000183c00 0x14000183ce0 0x14000183dc0]	{"trace_id": ""}
+2024-07-05T17:30:49.608+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:49.608+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1489042  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:30:50.561+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:30:50.561+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:50.561+0800	INFO	article/article.go:36	aritcles:[0x1400025fea0 0x140002f0000 0x140002f00e0 0x140002f01c0 0x140002f02a0 0x140002f0380]	{"trace_id": ""}
+2024-07-05T17:30:50.562+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:30:50.562+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1794708  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:31:59.591+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:31:59.591+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:31:59.593+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:31:59.593+0800	INFO	article/article.go:36	aritcles:[0x14000182380 0x14000182460 0x14000182540 0x14000182620 0x14000182700 0x140001827e0]	{"trace_id": ""}
+2024-07-05T17:31:59.593+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:31:59.593+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2929292  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:31:59.594+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[2]	{"trace_id": ""}
+2024-07-05T17:31:59.594+0800	INFO	article/article.go:36	aritcles:[0x1400022e000 0x1400022e0e0 0x1400022e1c0 0x1400022e2a0 0x1400022e380 0x1400022e460]	{"trace_id": ""}
+2024-07-05T17:31:59.597+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:31:59.597+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 6324833  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:05.662+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:05.662+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:05.663+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:05.663+0800	INFO	article/article.go:36	aritcles:[0x14000380000 0x140003800e0 0x140003801c0 0x140003802a0 0x14000380380 0x14000380460]	{"trace_id": ""}
+2024-07-05T17:32:05.663+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:05.663+0800	INFO	article/article.go:36	aritcles:[0x1400022eb60 0x1400022ec40 0x1400022ed20 0x1400022ee00 0x1400022eee0 0x1400022efc0]	{"trace_id": ""}
+2024-07-05T17:32:05.664+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:05.664+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:05.664+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1585750  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:05.664+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1868166  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:11.659+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:11.660+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:11.660+0800	INFO	article/article.go:36	aritcles:[0x14000140540 0x14000140620 0x14000140700 0x140001407e0 0x140001408c0 0x140001409a0]	{"trace_id": ""}
+2024-07-05T17:32:11.660+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:11.660+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1468000  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:11.667+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:11.667+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:11.667+0800	INFO	article/article.go:36	aritcles:[0x14000140c40 0x14000140d20 0x14000140e00 0x14000140ee0 0x14000140fc0 0x140001410a0]	{"trace_id": ""}
+2024-07-05T17:32:11.668+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:11.668+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1279583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:27.661+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:27.662+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:27.662+0800	INFO	article/article.go:36	aritcles:[0x1400025e9a0 0x1400025ea80 0x1400025eb60 0x1400025ec40 0x1400025ed20 0x1400025ee00]	{"trace_id": ""}
+2024-07-05T17:32:27.663+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:27.663+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1934167  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:27.667+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:27.668+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:27.668+0800	INFO	article/article.go:36	aritcles:[0x1400025f500 0x1400025f5e0 0x1400025f6c0 0x1400025f7a0 0x1400025f880 0x1400025f960]	{"trace_id": ""}
+2024-07-05T17:32:27.668+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:27.668+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1619917  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:34.627+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:34.628+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:34.628+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:34.628+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:34.628+0800	INFO	article/article.go:36	aritcles:[0x14000141a40 0x14000141b20 0x14000141c00 0x14000141ce0 0x14000141dc0 0x14000141ea0]	{"trace_id": ""}
+2024-07-05T17:32:34.628+0800	INFO	article/article.go:36	aritcles:[0x14000182c40 0x14000182d20 0x14000182e00 0x14000182ee0 0x14000182fc0 0x140001830a0]	{"trace_id": ""}
+2024-07-05T17:32:34.629+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:34.629+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:34.629+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1455917  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:34.629+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1659291  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:59.618+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:59.618+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:32:59.619+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:59.619+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:59.619+0800	INFO	article/article.go:36	aritcles:[0x140004fa540 0x140004fa620 0x140004fa700 0x140004fa7e0 0x140004fa8c0 0x140004fa9a0]	{"trace_id": ""}
+2024-07-05T17:32:59.619+0800	INFO	article/article.go:36	aritcles:[0x1400046a1c0 0x1400046a2a0 0x1400046a380 0x1400046a460 0x1400046a540 0x1400046a620]	{"trace_id": ""}
+2024-07-05T17:32:59.620+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:59.620+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:32:59.620+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2346292  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:32:59.621+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3174834  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:03.590+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:03.590+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:03.591+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:03.591+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:03.591+0800	INFO	article/article.go:36	aritcles:[0x1400046a8c0 0x1400046a9a0 0x1400046aa80 0x1400046ab60 0x1400046ac40 0x1400046ad20]	{"trace_id": ""}
+2024-07-05T17:33:03.591+0800	INFO	article/article.go:36	aritcles:[0x14000380c40 0x14000380d20 0x14000380e00 0x14000380ee0 0x14000380fc0 0x140003810a0]	{"trace_id": ""}
+2024-07-05T17:33:03.591+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:03.591+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:03.591+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 948625  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:03.592+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1481541  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:05.602+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:05.602+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:05.603+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:05.603+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:05.603+0800	INFO	article/article.go:36	aritcles:[0x14000381260 0x14000381340 0x14000381420 0x14000381500 0x140003815e0 0x140003816c0]	{"trace_id": ""}
+2024-07-05T17:33:05.603+0800	INFO	article/article.go:36	aritcles:[0x14000172000 0x140001720e0 0x140001721c0 0x140001722a0 0x14000172380 0x14000172460]	{"trace_id": ""}
+2024-07-05T17:33:05.603+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:05.603+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:05.603+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1565875  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:05.603+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1618916  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:06.594+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:06.594+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:06.594+0800	INFO	article/article.go:36	aritcles:[0x1400022fb20 0x1400022fc00 0x1400022fce0 0x1400022fdc0 0x1400022fea0 0x140006ae000]	{"trace_id": ""}
+2024-07-05T17:33:06.595+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:06.595+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:06.595+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1251167  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:06.595+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:06.595+0800	INFO	article/article.go:36	aritcles:[0x140006ae2a0 0x140006ae380 0x140006ae460 0x140006ae540 0x140006ae620 0x140006ae700]	{"trace_id": ""}
+2024-07-05T17:33:06.596+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:06.596+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1258083  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:18.602+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:18.602+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:18.603+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:18.603+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:33:18.603+0800	INFO	article/article.go:36	aritcles:[0x14000381dc0 0x14000381ea0 0x140005b2000 0x140005b20e0 0x140005b21c0 0x140005b22a0]	{"trace_id": ""}
+2024-07-05T17:33:18.603+0800	INFO	article/article.go:36	aritcles:[0x1400046b960 0x1400046ba40 0x1400046bb20 0x1400046bc00 0x1400046bce0 0x1400046bdc0]	{"trace_id": ""}
+2024-07-05T17:33:18.605+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T17:33:18.605+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3273417  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:18.606+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-05T17:33:18.615+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 12895083  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:19.600+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:19.600+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:19.600+0800	INFO	article/article.go:36	aritcles:[0x14000172a80 0x14000172b60 0x14000172c40 0x14000172d20 0x14000172e00 0x14000172ee0]	{"trace_id": ""}
+2024-07-05T17:33:19.601+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:19.601+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1342083  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:19.604+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:19.604+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:19.604+0800	INFO	article/article.go:36	aritcles:[0x140006af180 0x140006af260 0x140006af340 0x140006af420 0x140006af500 0x140006af5e0]	{"trace_id": ""}
+2024-07-05T17:33:19.605+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:19.605+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1566583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:32.589+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:32.589+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:32.590+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:33:32.590+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:32.590+0800	INFO	article/article.go:36	aritcles:[0x140006222a0 0x14000622380 0x14000622460 0x14000622540 0x14000622620 0x14000622700]	{"trace_id": ""}
+2024-07-05T17:33:32.590+0800	INFO	article/article.go:36	aritcles:[0x140006ae000 0x140006ae0e0 0x140006ae1c0 0x140006ae2a0 0x140006ae380 0x140006ae460]	{"trace_id": ""}
+2024-07-05T17:33:32.591+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:32.591+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:32.591+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1846334  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:32.591+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1393334  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:35.569+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:35.570+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:35.570+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:35.570+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:35.570+0800	INFO	article/article.go:36	aritcles:[0x140001822a0 0x14000182380 0x14000182460 0x14000182540 0x14000182620 0x14000182700]	{"trace_id": ""}
+2024-07-05T17:33:35.570+0800	INFO	article/article.go:36	aritcles:[0x14000622fc0 0x140006230a0 0x14000623180 0x14000623260 0x14000623340 0x14000623420]	{"trace_id": ""}
+2024-07-05T17:33:35.570+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:35.571+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:35.571+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 828791  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:35.571+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1521375  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:38.588+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:38.588+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:38.588+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:38.588+0800	INFO	article/article.go:36	aritcles:[0x14000623b20 0x14000623c00 0x14000623ce0 0x14000623dc0 0x14000623ea0 0x14000642000]	{"trace_id": ""}
+2024-07-05T17:33:38.588+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:38.588+0800	INFO	article/article.go:36	aritcles:[0x1400046a620 0x1400046a700 0x1400046a7e0 0x1400046a8c0 0x1400046a9a0 0x1400046aa80]	{"trace_id": ""}
+2024-07-05T17:33:38.589+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:38.589+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:38.589+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1650792  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:38.589+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1618125  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:39.575+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:39.575+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:33:39.576+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:39.576+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:39.576+0800	INFO	article/article.go:36	aritcles:[0x140006427e0 0x140006428c0 0x140006429a0 0x14000642a80 0x14000642b60 0x14000642c40]	{"trace_id": ""}
+2024-07-05T17:33:39.576+0800	INFO	article/article.go:36	aritcles:[0x140001828c0 0x140001829a0 0x14000182a80 0x14000182b60 0x14000182c40 0x14000182d20]	{"trace_id": ""}
+2024-07-05T17:33:39.577+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:39.577+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:33:39.577+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1261834  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:33:39.577+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1682000  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:35:18.660+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:35:18.662+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:35:18.666+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[3]	{"trace_id": ""}
+2024-07-05T17:35:18.666+0800	INFO	article/article.go:36	aritcles:[0x140004fa540 0x140004fa620 0x140004fa700 0x140004fa7e0 0x140004fa8c0 0x140004fa9a0]	{"trace_id": ""}
+2024-07-05T17:35:18.666+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[4]	{"trace_id": ""}
+2024-07-05T17:35:18.667+0800	INFO	article/article.go:36	aritcles:[0x1400046aee0 0x1400046afc0 0x1400046b0a0 0x1400046b260 0x1400046b340 0x1400046b420]	{"trace_id": ""}
+2024-07-05T17:35:18.667+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:35:18.668+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T17:35:18.668+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 6122958  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:35:18.668+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 10305542  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:35:46.661+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:35:46.661+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:35:46.663+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:35:46.663+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:35:46.663+0800	INFO	article/article.go:36	aritcles:[0x140001821c0 0x140001822a0 0x14000182380 0x14000182460 0x14000182540 0x14000182620]	{"trace_id": ""}
+2024-07-05T17:35:46.663+0800	INFO	article/article.go:36	aritcles:[0x1400046a000 0x140004fa000 0x140004fa0e0 0x140004fa1c0 0x140004fa380 0x140004fa460]	{"trace_id": ""}
+2024-07-05T17:35:46.663+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:35:46.663+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:35:46.663+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2032000  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:35:46.664+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2361667  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:36:13.373+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:36:13.374+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:36:13.374+0800	INFO	article/article.go:36	aritcles:[0x140004fa8c0 0x140004fa9a0 0x140004faa80 0x140004fab60 0x140004fac40 0x140004fae00]	{"trace_id": ""}
+2024-07-05T17:36:13.375+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:36:13.375+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1796708  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:36:13.376+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:36:13.376+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:36:13.376+0800	INFO	article/article.go:36	aritcles:[0x1400046a0e0 0x1400046a1c0 0x1400046a2a0 0x1400046a380 0x1400046a460 0x1400046a540]	{"trace_id": ""}
+2024-07-05T17:36:13.376+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:36:13.376+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 934041  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:37:11.872+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:37:11.873+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:37:11.875+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:37:11.875+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:37:11.875+0800	INFO	article/article.go:36	aritcles:[0x140006421c0 0x140006422a0 0x14000642380 0x14000642460 0x14000642540 0x14000642620]	{"trace_id": ""}
+2024-07-05T17:37:11.875+0800	INFO	article/article.go:36	aritcles:[0x1400046a7e0 0x1400046a8c0 0x1400046a9a0 0x1400046aa80 0x1400046ab60 0x1400046ad20]	{"trace_id": ""}
+2024-07-05T17:37:11.875+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:37:11.875+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:37:11.876+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3671583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:37:11.876+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3555500  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:38:40.370+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:38:40.372+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:38:40.372+0800	INFO	article/article.go:36	aritcles:[0x140001821c0 0x140001822a0 0x14000182380 0x14000182460 0x14000182540 0x14000182620]	{"trace_id": ""}
+2024-07-05T17:38:40.373+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:38:40.373+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2874458  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:38:48.340+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:38:48.342+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:38:48.342+0800	INFO	article/article.go:36	aritcles:[0x14000642540 0x14000642620 0x14000642700 0x140006427e0 0x140006428c0 0x140006429a0]	{"trace_id": ""}
+2024-07-05T17:38:48.343+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:38:48.343+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2301875  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:38:53.976+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:38:53.978+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:38:53.978+0800	INFO	article/article.go:36	aritcles:[0x1400025e000 0x1400025e0e0 0x1400025e1c0 0x1400025e2a0 0x1400025e380 0x1400025e460]	{"trace_id": ""}
+2024-07-05T17:38:53.979+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:38:53.979+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2393666  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:38:59.557+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:38:59.559+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:38:59.559+0800	INFO	article/article.go:36	aritcles:[0x14000643500 0x140006435e0 0x140006436c0 0x140006437a0 0x14000643880 0x14000643960]	{"trace_id": ""}
+2024-07-05T17:38:59.559+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:38:59.559+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2299583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:42:33.655+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:42:33.659+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[3]	{"trace_id": ""}
+2024-07-05T17:42:33.659+0800	INFO	article/article.go:36	aritcles:[0x14000182460 0x14000182540 0x14000182620 0x14000182700 0x140001827e0 0x140001828c0]	{"trace_id": ""}
+2024-07-05T17:42:33.669+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[9]	{"trace_id": ""}
+2024-07-05T17:42:33.669+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 14408917  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:42:33.673+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:42:33.674+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:42:33.674+0800	INFO	article/article.go:36	aritcles:[0x14000642460 0x14000642540 0x14000642620 0x14000642700 0x140006427e0 0x140006428c0]	{"trace_id": ""}
+2024-07-05T17:42:33.674+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:42:33.675+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1490750  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:43:37.083+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:43:37.084+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:43:37.084+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:43:37.084+0800	INFO	article/article.go:36	aritcles:[0x140001821c0 0x140001822a0 0x14000182380 0x14000182460 0x14000182540 0x14000182620]	{"trace_id": ""}
+2024-07-05T17:43:37.085+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:43:37.085+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:43:37.085+0800	INFO	article/article.go:36	aritcles:[0x140001828c0 0x140001829a0 0x14000182a80 0x14000182b60 0x14000182c40 0x14000182d20]	{"trace_id": ""}
+2024-07-05T17:43:37.085+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1752000  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:43:37.085+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:43:37.085+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1181292  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:44:01.549+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:44:01.550+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:44:01.550+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:44:01.550+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:44:01.550+0800	INFO	article/article.go:36	aritcles:[0x14000183260 0x14000183340 0x14000183420 0x14000183500 0x140001835e0 0x140001836c0]	{"trace_id": ""}
+2024-07-05T17:44:01.550+0800	INFO	article/article.go:36	aritcles:[0x14000140460 0x14000140540 0x14000140620 0x14000140700 0x140001407e0 0x140001408c0]	{"trace_id": ""}
+2024-07-05T17:44:01.551+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:44:01.551+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:44:01.551+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1762583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:44:01.552+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2166125  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:53:15.040+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:53:15.043+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[2]	{"trace_id": ""}
+2024-07-05T17:53:15.043+0800	INFO	article/article.go:36	aritcles:[0x14000182460 0x14000182540 0x14000182620 0x14000182700 0x140001827e0 0x140001828c0]	{"trace_id": ""}
+2024-07-05T17:53:15.044+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:53:15.045+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 4432375  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:53:20.779+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:53:20.781+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:53:20.781+0800	INFO	article/article.go:36	aritcles:[0x14000182fc0 0x140001830a0 0x14000183180 0x14000183260 0x14000183340 0x14000183420]	{"trace_id": ""}
+2024-07-05T17:53:20.787+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[5]	{"trace_id": ""}
+2024-07-05T17:53:20.787+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 7979875  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:53:23.581+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:53:23.583+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:53:23.583+0800	INFO	article/article.go:36	aritcles:[0x140002c2460 0x140002c2540 0x140002c2620 0x140002c2700 0x140002c27e0 0x140002c28c0]	{"trace_id": ""}
+2024-07-05T17:53:23.584+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:53:23.584+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2608292  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:53:26.245+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:53:26.247+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:53:26.247+0800	INFO	article/article.go:36	aritcles:[0x14000183b20 0x14000183c00 0x14000183ce0 0x14000183dc0 0x14000183ea0 0x140001ba000]	{"trace_id": ""}
+2024-07-05T17:53:26.247+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:53:26.247+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2008958  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:54:10.602+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:54:10.603+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[0]	{"trace_id": ""}
+2024-07-05T17:54:10.603+0800	INFO	article/article.go:36	aritcles:[0x140001582a0 0x14000158380 0x14000158460 0x14000158540 0x14000158620 0x14000158700]	{"trace_id": ""}
+2024-07-05T17:54:10.604+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:54:10.604+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 1725292  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:54:10.610+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:54:10.617+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[6]	{"trace_id": ""}
+2024-07-05T17:54:10.617+0800	INFO	article/article.go:36	aritcles:[0x140001589a0 0x14000158a80 0x14000158b60 0x14000158c40 0x14000158d20 0x14000158e00]	{"trace_id": ""}
+2024-07-05T17:54:10.617+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:54:10.617+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 7684417  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:55:31.459+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:55:31.462+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[2]	{"trace_id": ""}
+2024-07-05T17:55:31.462+0800	INFO	article/article.go:36	aritcles:[0x140001590a0 0x14000159180 0x14000159260 0x14000159340 0x14000159420 0x14000159500]	{"trace_id": ""}
+2024-07-05T17:55:31.463+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T17:55:31.464+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 4486166  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T17:56:29.209+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T17:56:29.211+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T17:56:29.211+0800	INFO	article/article.go:36	aritcles:[0x140001821c0 0x140001822a0 0x14000182380 0x14000182460 0x14000182620 0x14000182700]	{"trace_id": ""}
+2024-07-05T17:56:29.212+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T17:56:29.212+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3103500  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T18:10:05.638+0800	INFO	article/article.go:31	page 1 size:10	{"trace_id": ""}
+2024-07-05T18:10:05.640+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` ORDER BY like_count DESC LIMIT 10] rows:[6] cost:[1]	{"trace_id": ""}
+2024-07-05T18:10:05.640+0800	INFO	article/article.go:36	aritcles:[0x1400039e000 0x1400039e0e0 0x1400039e1c0 0x1400039e2a0 0x1400039e380 0x1400039e460]	{"trace_id": ""}
+2024-07-05T18:10:05.640+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_info` WHERE user_id in ('fff','fff','fff','','','')] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T18:10:05.641+0800	INFO	gin@v1.10.0/context.go:185	/blogs/recommend-article{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/recommend-article <nil>} {query 15 0 page=1&size=10 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3127042  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T18:10:07.221+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T18:10:07.222+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `articles` WHERE article_id = 'nid_1720164859186'] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T18:10:07.222+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article_id{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /blogs/article_id <nil>} {query 15 0 article_id=nid_1720164859186 <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 2206000  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T18:11:08.701+0800	INFO	httpserver/server.go:69	[shutdown success]	{"trace_id": ""}
+2024-07-05T18:11:08.702+0800	INFO	httpserver/server.go:79	[shutdown success]	{"trace_id": ""}
