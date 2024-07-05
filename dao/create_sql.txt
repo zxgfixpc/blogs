@@ -27,6 +27,7 @@ CREATE TABLE `articles` (
   `article_id` VARCHAR(64) NOT NULL UNIQUE,
   `title` VARCHAR(255) NOT NULL,
   `summary` VARCHAR(512) DEFAULT '' NOT NULL,
+  `cover_image` VARCHAR(512) DEFAULT '' NOT NULL,
   `tags` TEXT NOT NULL,
   `content` TEXT NOT NULL,
   `view_count` BIGINT(20) UNSIGNED DEFAULT 0 NOT NULL,

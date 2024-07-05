@@ -23,14 +23,13 @@ func Login(ctx context.Context, userID, password string) (string, error) {
 	}
 
 	// sessionID
-	sessionID := time.Now().Unix()
-	sessionIDStr := fmt.Sprintf("%v%v", userID, sessionID)
-	sessionExpr := time.Now().Add(1 * time.Hour).Unix()
+	sessionID := getSessionID(userID)
+	sessionExpr := getSessionExpr()
 	err = dao.UpdateUserLogin(ctx, userID, map[string]interface{}{
-		"session_id":   sessionIDStr,
+		"session_id":   sessionID,
 		"session_expr": sessionExpr,
 	})
-	return sessionIDStr, err
+	return sessionID, err
 }
 
 func Exit(ctx context.Context, userID string) error {
@@ -40,8 +39,9 @@ func Exit(ctx context.Context, userID string) error {
 	})
 }
 
-func Register(ctx context.Context, userID, password string) error {
-	return dao.Trans(ctx, func(transCtx context.Context) error {
+func Register(ctx context.Context, userID, password string) (string, error) {
+	var sessionID string
+	err := dao.Trans(ctx, func(transCtx context.Context) error {
 		userInfo, err := dao.GetUserLoginByUserID(transCtx, userID)
 		if err != nil {
 			return err
@@ -50,9 +50,12 @@ func Register(ctx context.Context, userID, password string) error {
 			return fmt.Errorf("用户已注册")
 		}
 
+		sessionID = getSessionID(userID)
 		err = dao.CreateUserLogin(transCtx, &dao.UserLogin{
-			UserID:   userID,
-			Password: password,
+			UserID:      userID,
+			Password:    password,
+			SessionID:   sessionID,
+			SessionExpr: getSessionExpr(),
 		})
 		if err != nil {
 			return err
@@ -67,4 +70,15 @@ func Register(ctx context.Context, userID, password string) error {
 		}
 		return nil
 	})
+
+	return sessionID, err
+}
+
+func getSessionID(userID string) string {
+	sessionID := time.Now().Unix()
+	return fmt.Sprintf("%v%v", userID, sessionID)
+}
+
+func getSessionExpr() int64 {
+	return time.Now().Add(2 * time.Hour).Unix()
 }

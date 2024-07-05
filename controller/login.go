@@ -46,11 +46,13 @@ func Register(c *gin.Context) {
 		return
 	}
 
-	err := user.Register(ginsugar.Context(c), req.UserID, req.Password)
+	sessionID, err := user.Register(ginsugar.Context(c), req.UserID, req.Password)
 	if err != nil {
 		ginsugar.Fail(c, nil, err)
 		return
 	}
 
-	ginsugar.Success(c, nil)
+	ginsugar.Success(c, map[string]interface{}{
+		"session_id": sessionID,
+	})
 }

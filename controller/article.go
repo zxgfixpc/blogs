@@ -1,6 +1,8 @@
 package controller
 
 import (
+	"fmt"
+
 	"github.com/gin-gonic/gin"
 
 	"blogs/dao"
@@ -16,13 +18,15 @@ func CreateOrUpdateArticle(c *gin.Context) {
 	}
 	req.UserID = ginsugar.GetUserID(c)
 
-	err := article.CreateOrUpdateArticle(ginsugar.Context(c), req)
+	id, err := article.CreateOrUpdateArticle(ginsugar.Context(c), req)
 	if err != nil {
 		ginsugar.Fail(c, nil, err)
 		return
 	}
 
-	ginsugar.Success(c, nil)
+	ginsugar.Success(c, map[string]interface{}{
+		"article_id": id,
+	})
 }
 
 func GetRecommendArticles(c *gin.Context) {
@@ -43,4 +47,19 @@ func GetRecommendArticles(c *gin.Context) {
 	}
 
 	ginsugar.Success(c, list)
+}
+
+func GetArticleByID(c *gin.Context) {
+	articleID, ok := c.GetQuery("article_id")
+	if !ok {
+		ginsugar.InputError(c, fmt.Errorf("not article_id"))
+	}
+
+	articleInfo, err := article.GetArticleByID(ginsugar.Context(c), articleID)
+	if err != nil {
+		ginsugar.Fail(c, nil, err)
+		return
+	}
+
+	ginsugar.Success(c, articleInfo)
 }

@@ -1,0 +1,22 @@
+2024-07-05T15:38:31.908+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T15:40:05.602+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[3]	{"trace_id": ""}
+2024-07-05T15:40:05.609+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[INSERT INTO `articles` (`deleted_id`,`created_at`,`updated_at`,`article_id`,`title`,`summary`,`cover_image`,`tags`,`content`,`view_count`,`like_count`,`comment_count`,`user_id`,`status`) VALUES (0,'2024-07-05 15:40:05.604','2024-07-05 15:40:05.604','nid_1720165205603','123','321','','null','123
+123',0,0,0,'fff',0)] rows:[1] cost:[6]	{"trace_id": ""}
+2024-07-05T15:40:05.610+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article-create-or-update{status 11 200  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/article-create-or-update <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 11933625  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T15:40:38.548+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-05T15:40:38.552+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[INSERT INTO `articles` (`deleted_id`,`created_at`,`updated_at`,`article_id`,`title`,`summary`,`cover_image`,`tags`,`content`,`view_count`,`like_count`,`comment_count`,`user_id`,`status`) VALUES (0,'2024-07-05 15:40:38.55','2024-07-05 15:40:38.55','nid_1720165238549','','','','null','',0,0,0,'fff',0)] rows:[1] cost:[3]	{"trace_id": ""}
+2024-07-05T15:40:38.552+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article-create-or-update{status 11 200  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/article-create-or-update <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 7464750  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T15:40:47.110+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T15:40:47.113+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[UPDATE `articles` SET `content`='123
+12111',`cover_image`='',`summary`='321',`tags`='null',`title`='123',`updated_at`='2024-07-05 15:40:47.111' WHERE article_id = 'nid_1720165238549'] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-05T15:40:47.113+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article-create-or-update{status 11 200  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/article-create-or-update <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 4360083  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T15:40:51.139+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[0]	{"trace_id": ""}
+2024-07-05T15:40:51.142+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[UPDATE `articles` SET `content`='123
+12111',`cover_image`='',`summary`='321',`tags`='null',`title`='123',`updated_at`='2024-07-05 15:40:51.14' WHERE article_id = 'nid_1720165238549'] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-05T15:40:51.142+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article-create-or-update{status 11 200  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/article-create-or-update <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 3799791  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T15:41:04.783+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[1]	{"trace_id": ""}
+2024-07-05T15:41:04.786+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[UPDATE `articles` SET `content`='123
+12111',`cover_image`='',`summary`='321',`tags`='null',`title`='123',`updated_at`='2024-07-05 15:41:04.784' WHERE article_id = 'nid_1720165238549'] rows:[1] cost:[3]	{"trace_id": ""}
+2024-07-05T15:41:04.787+0800	INFO	gin@v1.10.0/context.go:185	/blogs/article-create-or-update{status 11 200  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/article-create-or-update <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 4862875  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T15:52:39.421+0800	INFO	httpserver/server.go:69	[shutdown success]	{"trace_id": ""}
+2024-07-05T15:52:39.423+0800	INFO	httpserver/server.go:79	[shutdown success]	{"trace_id": ""}

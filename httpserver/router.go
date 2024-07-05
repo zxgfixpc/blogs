@@ -19,6 +19,7 @@ func registerRouter(router *gin.Engine) {
 	{
 		needLoginGroup.POST("exit", controller.Exit)
 		needLoginGroup.POST("article-create-or-update", controller.CreateOrUpdateArticle)
+		needLoginGroup.GET("article_id", controller.GetArticleByID)
 	}
 
 }

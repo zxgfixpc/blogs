@@ -2,13 +2,17 @@ package article
 
 import (
 	"context"
+	"fmt"
+	"time"
 
 	"blogs/dao"
 )
 
-func CreateOrUpdateArticle(ctx context.Context, article *dao.Article) error {
+func CreateOrUpdateArticle(ctx context.Context, article *dao.Article) (string, error) {
 	if article.ArticleID == "" {
-		return dao.CreateArticle(ctx, article)
+		article.ArticleID = fmt.Sprintf("nid_%v", time.Now().UnixMilli())
+		err := dao.CreateArticle(ctx, article)
+		return article.ArticleID, err
 	}
 
 	updater := map[string]interface{}{
@@ -18,7 +22,8 @@ func CreateOrUpdateArticle(ctx context.Context, article *dao.Article) error {
 		"tags":        article.Tags,
 		"content":     article.Content,
 	}
-	return dao.UpdateArticleByArticleID(ctx, article.ArticleID, updater)
+	err := dao.UpdateArticleByArticleID(ctx, article.ArticleID, updater)
+	return article.ArticleID, err
 }
 
 func GetRecommendArticle(ctx context.Context, page, size int) (*GetRecommendArticleRsp, error) {
@@ -63,9 +68,14 @@ func GetRecommendArticle(ctx context.Context, page, size int) (*GetRecommendArti
 			CommentCount: v.CommentCount,
 			Nick:         userMap[v.UserID].Nick,
 			Avatar:       userMap[v.UserID].Avatar,
+			CreatedAt:    v.CreatedAt.Format("2006-01-02 15:04:05"),
 		}
 		ret.List = append(ret.List, item)
 	}
 
 	return ret, nil
+}
+
+func GetArticleByID(ctx context.Context, articleID string) (*dao.Article, error) {
+	return dao.GetArticleByArticleID(ctx, articleID)
 }

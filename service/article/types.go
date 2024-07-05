@@ -16,6 +16,7 @@ type ArtiInfo struct {
 	CommentCount int64       `json:"comment_count"`
 	Nick         string      `json:"nick"`
 	Avatar       string      `json:"avatar"`
+	CreatedAt    string      `json:"created_at"`
 }
 
 type GetRecommendArticleRsp struct {

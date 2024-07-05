@@ -2,8 +2,6 @@ package dao
 
 import (
 	"context"
-	"fmt"
-	"time"
 )
 
 type Article struct {
@@ -11,13 +9,14 @@ type Article struct {
 	ArticleID    string  `json:"article_id" gorm:"column:article_id"`
 	Title        string  `json:"title" gorm:"column:title"`
 	Summary      string  `json:"summary" gorm:"column:summary"`
-	CoverImage   string  `json:"cover_image" gorm:"cover_image"`
-	Tags         Strings `json:"tags" gorm:"tags"`
+	CoverImage   string  `json:"cover_image" gorm:"column:cover_image"`
+	Tags         Strings `json:"tags" gorm:"column:tags"`
 	Content      string  `json:"content" gorm:"column:content"`
 	ViewCount    int64   `json:"view_count" gorm:"column:view_count"`
 	LikeCount    int64   `json:"like_count" gorm:"column:like_count"`
 	CommentCount int64   `json:"comment_count" gorm:"column:comment_count"`
 	UserID       string  `json:"user_id" gorm:"column:user_id"`
+	Status       int8    `json:"status" gorm:"column:status"`
 }
 
 func (Article) TableName() string {
@@ -39,7 +38,6 @@ func GetArticleListByLikeCountSort(ctx context.Context, page int, size int) (res
 }
 
 func CreateArticle(ctx context.Context, article *Article) error {
-	article.ArticleID = fmt.Sprintf("nid_%v", time.Now().UnixMilli())
 	return defaultDB(ctx).Create(article).Error
 }
 

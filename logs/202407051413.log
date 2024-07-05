@@ -1,0 +1,6 @@
+2024-07-05T14:13:23.551+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[7]	{"trace_id": ""}
+2024-07-05T14:13:25.997+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[SELECT * FROM `user_login` WHERE user_id = 'fff'] rows:[1] cost:[4]	{"trace_id": ""}
+2024-07-05T14:13:25.999+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[UPDATE `user_login` SET `session_expr`=1720167205,`session_id`='fff1720160005',`updated_at`='2024-07-05 14:13:25.998' WHERE user_id = 'fff'] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-05T14:13:25.999+0800	INFO	gin@v1.10.0/context.go:185	/blogs/login{status 11 200  <nil>} {method 15 0 POST <nil>} {path 15 0 /blogs/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {cost 8 7408583  <nil>} {trace_id 15 0  <nil>}
+2024-07-05T14:52:36.017+0800	INFO	httpserver/server.go:69	[shutdown success]	{"trace_id": ""}
+2024-07-05T14:52:36.019+0800	INFO	httpserver/server.go:79	[shutdown success]	{"trace_id": ""}

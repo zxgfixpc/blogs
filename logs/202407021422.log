@@ -1,0 +1,3 @@
+2024-07-02T14:22:24.128+0800	INFO	log/gorm_logger.go:36	mysql success, sql:[show databases] rows:[1] cost:[2]	{"trace_id": ""}
+2024-07-02T14:33:46.916+0800	INFO	httpserver/server.go:69	[shutdown success]	{"trace_id": ""}
+2024-07-02T14:33:46.917+0800	INFO	httpserver/server.go:79	[shutdown success]	{"trace_id": ""}
